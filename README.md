@@ -34,7 +34,7 @@ Este projeto faz parte do Challenge da Alura em parceria com a Oracle, onde rece
 ## Créditos
 ![Logo](./img/logo.png)
 
-&copy; 2022 - 2024 Edigelson Nascimento. Todos os direitos reservados. **Este site foi desenvolvido com ❤️ por Edigelson Nascimento**
+&copy; 2022 Edigelson Nascimento. Todos os direitos reservados. **Este site foi desenvolvido com ❤️ por Edigelson Nascimento**
 
 ## Executando o Projeto
 
@@ -42,4 +42,4 @@ Para executar o projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/edigelson-nascimento/decodificador.git
+   git clone https://github.com/edigelsondev/decodificador.git
