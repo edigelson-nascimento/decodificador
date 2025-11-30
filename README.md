@@ -1,4 +1,4 @@
-# Encryptador Hacker v2.0.0
+# Decodificador v2.0.0
 
 ![Status](https://img.shields.io/badge/Status-Finalizado-success)
 ![License](https://img.shields.io/badge/License-MIT-blue)
