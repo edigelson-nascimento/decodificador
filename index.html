@@ -1,62 +1,141 @@
-<!DOCTYPE HTML> 
- <html lang="pt-BR"> 
- <head><!-- META/ESTILO/TITULO/FONT -->
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <meta name="robots" content="noindex">
-   <meta name="googlebot" content="noindex">
-   <meta name="viewport" content="width=device-width">
- <link rel="preconnect" href="https://fonts.googleapis.com"> 
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
- <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet">
- <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
- <link rel="manifest" href="./img/site.webmanifest">
- <link rel="stylesheet" href="./css/style.css"> <!-- Referência ao arquivo CSS -->
-   <title>{ Decodificador }</title>
-  </head>
-  
- <header>
-   <center>
-     <main><img src="./img/logo.png" alt="ed" width="200px" height="200px"/></main></center>
-   <h1>Decodificador</h1><br>
-   <h2>🤖 • Bem vindo(a) ao { Decodificador }</h2>
-  </header>
-  <br>
-  <br>
-  <br>
-<body>
-   <center><textarea id="caixamsg" rows="3" cols="20"placeholder="Digite aqui"></textarea><br /></div>
-<textarea id="caixamsg2" rows="3" cols="20"></textarea></center>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptador v2.0.0 — Modo Hacker</title>
+    
+    <!-- Favicons Obrigatórios -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/dusk/64/000000/console.png">
 
-   <center><section class="caixa">
+    <!-- Fontes Google: Share Tech Mono (Terminal) e Montserrat (Texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-<br><br>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração do Tailwind para cores personalizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hacker-green': '#00ff44',
+                        'hacker-dark': '#0d1117',
+                        'hacker-dim': '#003300',
+                    },
+                    fontFamily: {
+                        'mono': ['"Share Tech Mono"', 'monospace'],
+                        'sans': ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-<ul>
-<li><button id="botao1">{🔒} Criptografar</button></li>
-<li><button id="botao2">{🔓} Descriptografar</button></li>
-<li><button id="copiar">{📝} Cópia</button></li>
-<li><button id="limpar">{🧹} Limpar</button></li>
-</ul>
-</div>
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-black text-hacker-green font-mono antialiased overflow-x-hidden relative min-h-screen flex flex-col">
 
-   </section></center>
- 
-   <script src="./js/encrypt.js"></script>
+    <!-- Efeito de Scanline de fundo -->
+    <div class="scanline"></div>
+    <div class="overlay"></div>
 
-  <div class="conteiner">
-   <div class="badge">
-<h4><p>🏆 • Conquista do Challenge</p>
-   <img src="https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F10224%2F1659462279Badge_Sharer_Alura_ChallengeOracleONE_2000x2000_V3.png?utm_campaign=alura_latam_-_challenge_email_projeto_1_br&utm_medium=email&utm_source=RD+Station" alt="alura" width="300px" height="300px"/></h4>
-  </div>
-  
-  </div>
-  <footer><!-- Créditos -->
-   <h4><img src="./img/logo.png" alt="ed" width="30px" height="30px"/>
-  <p>© 2022 - <span id="currentYear"></span> Edigelson Nascimento. Todos os direitos reservados.</p></h4>
- </footer>
- <script src="./js/créditos.js"></script>
-  </body>
-  
- </html>
+    <!-- Cabeçalho -->
+    <header class="w-full p-6 text-center border-b border-hacker-green/30 relative z-10">
+        <h1 class="text-3xl md:text-5xl font-bold tracking-widest glitch-text" data-text="> ENCRYPTADOR_v2.0.0">
+            &gt; ENCRYPTADOR_v2.0.0
+        </h1>
+        <p class="text-xs md:text-sm mt-2 opacity-70 font-sans tracking-widest">/// SISTEMA DE MENSAGENS SEGURO ///</p>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow container mx-auto px-4 py-8 relative z-10 flex flex-col lg:flex-row gap-8 items-stretch justify-center">
+
+        <!-- Seção de Entrada (Input) -->
+        <section class="flex-1 flex flex-col gap-4">
+            <label for="caixamsg" class="text-sm opacity-80 pl-2 border-l-2 border-hacker-green">
+                :: ENTRADA DE DADOS ::
+            </label>
+            <textarea 
+                id="caixamsg" 
+                class="w-full h-64 lg:h-96 bg-black/80 border border-hacker-green p-4 text-lg md:text-xl focus:outline-none focus:shadow-[0_0_15px_#00ff44] transition-all resize-none terminal-input custom-scroll placeholder-hacker-green/30"
+                placeholder="Insira o texto para codificar aqui..."
+                autofocus
+            ></textarea>
+            
+            <div class="text-xs opacity-60 flex items-center gap-2">
+                <span class="inline-block w-2 h-2 bg-hacker-green rounded-full animate-pulse"></span>
+                <span>Apenas letras minúsculas e sem acento.</span>
+            </div>
+
+            <!-- Botões de Ação Principal -->
+            <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                <button id="botao1" class="flex-1 btn-hacker py-3 px-6 text-black bg-hacker-green font-bold uppercase tracking-wider hover:bg-white transition-colors duration-300 relative overflow-hidden group">
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                        [ CRIPTOGRAFAR ]
+                    </span>
+                </button>
+                <button id="botao2" class="flex-1 btn-hacker py-3 px-6 bg-transparent border border-hacker-green text-hacker-green font-bold uppercase tracking-wider hover:bg-hacker-green/10 transition-colors duration-300">
+                    [ DESCRIPTOGRAFAR ]
+                </button>
+            </div>
+        </section>
+
+        <!-- Divisor Visual (Desktop) -->
+        <div class="hidden lg:flex flex-col justify-center items-center opacity-50">
+            <div class="w-px h-full bg-hacker-green/50"></div>
+        </div>
+
+        <!-- Seção de Saída (Output) -->
+        <section class="flex-1 flex flex-col gap-4">
+            <label for="caixamsg2" class="text-sm opacity-80 pl-2 border-l-2 border-hacker-green">
+                :: SAÍDA DO CONSOLE ::
+            </label>
+            <textarea 
+                id="caixamsg2" 
+                class="w-full h-64 lg:h-96 bg-hacker-dark/90 border border-hacker-green p-4 text-lg md:text-xl focus:outline-none focus:shadow-[0_0_15px_#00ff44] transition-all resize-none terminal-input custom-scroll text-white/90"
+                placeholder="> Aguardando processamento..."
+                readonly
+            ></textarea>
+
+            <!-- Botões Secundários -->
+            <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                <button id="copiar" class="flex-1 py-3 px-6 border border-hacker-green/50 text-hacker-green hover:bg-hacker-green hover:text-black transition-all duration-300 font-bold uppercase tracking-wider">
+                    // COPIAR
+                </button>
+                <button id="limpar" class="flex-1 py-3 px-6 border border-red-500/50 text-red-400 hover:bg-red-500 hover:text-black transition-all duration-300 font-bold uppercase tracking-wider">
+                    // LIMPAR TERMINAL
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé Obrigatório -->
+    <footer class="w-full border-t border-hacker-green/30 bg-black/90 p-6 text-center relative z-10 mt-auto">
+        <div class="container mx-auto">
+            <!-- Badge estilo Alura/Tech -->
+            <div class="mb-4 inline-block border border-hacker-green px-2 py-1 text-xs tracking-tighter opacity-70">
+                CHALLENGE_ONE_DECODER
+            </div>
+            
+            <p class="text-sm font-sans tracking-wide">
+                &copy; <span id="ano-atual"></span> 
+                <a href="https://edigelson.pages.dev" target="_blank" class="font-bold hover:text-white hover:underline decoration-hacker-green underline-offset-4 transition-all ml-1">
+                    Edigelson Nascimento
+                </a>
+            </p>
+            <p class="text-xs text-gray-500 mt-2">Desenvolvido com HTML, CSS (Tailwind) e JS Puro.</p>
+        </div>
+    </footer>
+
+    <!-- Script Lógico -->
+    <script src="js/encrypt.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
