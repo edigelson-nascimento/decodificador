@@ -160,7 +160,7 @@ btnLimpar.onclick = onLimpar;
 // Inicialização
 window.onload = () => {
     atualizarAno();
-    console.log("> SISTEMA ENCRYPTADOR v2.0.0 INICIADO...");
+    console.log("> SISTEMA DECODIFICADOR v2.0.0 INICIADO...");
     console.log("> Copyright atualizado: " + new Date().getFullYear());
     console.log("> Aguardando input do usuário...");
 };
