@@ -1,5 +1,5 @@
 /*
-   Lógica do Encryptador Hacker v2.0.0
+   Lógica do Decodificador Hacker v2.0.0
    Desenvolvido por Edigelson Nascimento
 */
 
